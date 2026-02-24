@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+  color: lightgrey;
+  background-color: rgb(26, 26, 26);
+}
+
+/* Cabeçalho */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 3rem 0;
+  width: 100%;
+}
+
+nav h1 {
+  margin-right: auto;
+  padding-left: 1.5rem;
+  color: lightgrey;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+nav a:link,
+nav a:visited {
+  padding: 0.4rem 2rem;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: lightgrey;
+  background-color: black;
+  border-radius: 15px;
+  transition: 0.5s;
+}
+
+nav a:hover,
+nav a:active {
+  background-color: lightgrey;
+  color: black;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+/* Seção geral */
+
+.secao {
+  padding: 3rem;
+  scroll-margin-top: 10rem;
+  margin: 5rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0.4rem;
+}
+
+/* Apresentação Inicial */
+
+#apresentacaoInicial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+#apresentacaoInicial .container {
+  margin: 0;
+}
+
+#apresentacaoInicial .container h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+#apresentacaoInicial .container h3 {
+  font-size: 2rem;
+}
+
+#imagemAle {
+  border: solid 5px black;
+  border-radius: 50%;
+  width: 40rem;
+}
+
+/* Rodapé */
+
+.logo {
+  width: 40px;
+  margin-right: 10px;
+}
