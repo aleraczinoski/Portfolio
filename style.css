@@ -6,10 +6,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.6rem;
   line-height: 1.4;
   overflow-x: hidden;
@@ -18,25 +19,47 @@ body {
   background-color: rgb(26, 26, 26);
 }
 
+#quemSouEu h2,
+#Competencias h2,
+#Projetos h2 {
+  text-align: center;
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+#quemSouEu h2::after,
+#Competencias h2::after,
+#Projetos h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: darkblue;
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
 /* Cabeçalho */
 
 nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
   display: flex;
   align-items: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
   padding: 3rem 0;
   width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav h1 {
+nav img {
   margin-right: auto;
-  padding-left: 1.5rem;
-  color: lightgrey;
-  font-size: 3rem;
-  font-weight: bold;
+  padding-left: 3rem;
+  height: 7rem;
 }
 
 nav a:link,
@@ -46,25 +69,25 @@ nav a:visited {
   text-decoration: none;
   font-size: 1.8rem;
   color: lightgrey;
-  background-color: black;
+  background-color: transparent;
   border-radius: 15px;
-  transition: 0.5s;
+  transition: all 0.3s ease;
 }
 
 nav a:hover,
 nav a:active {
-  background-color: lightgrey;
-  color: black;
-  text-decoration: none;
-  transition: 0.5s;
+  background-color: darkblue;
+  color: white;
+  border-color: darkblue;
+  box-shadow: 0 0 15px rgba(0, 0, 139, 0.5);
 }
 
 /* Seção geral */
 
 .secao {
   padding: 3rem;
-  scroll-margin-top: 10rem;
-  margin: 5rem 0;
+  scroll-margin-top: 16rem;
+  margin: 2rem;
 }
 
 .container {
@@ -81,6 +104,8 @@ nav a:active {
   align-items: center;
   justify-content: center;
   gap: 5rem;
+  min-height: 80vh;
+  margin-top: 12rem;
 }
 
 #apresentacaoInicial .container {
@@ -91,16 +116,93 @@ nav a:active {
   font-size: 4rem;
   margin-bottom: 2rem;
   color: white;
+  overflow: hidden;
+  border-right: 0.15em solid darkblue;
+  white-space: nowrap;
+  margin: 0 0 2rem 0;
+  letter-spacing: 0.1em;
+  max-width: fit-content;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
 }
 
 #apresentacaoInicial .container h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  animation-delay: 3.5s;
 }
 
 #imagemAle {
-  border: solid 5px black;
+  border: 4px solid rgba(211, 211, 211, 0.1);
   border-radius: 50%;
   width: 40rem;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Quem Sou Eu */
+
+#quemSouEu {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 4rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+}
+
+#quemSouEu p {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #e0e0e0;
+}
+
+/* Competências */
+#Competencias .container {
+  text-align: center;
+}
+
+.subtitulo-competencia {
+  font-size: 2.4rem;
+  color: lightgrey;
+  margin: 3rem 0 2rem 0;
+  width: 100%;
+}
+
+.containerCompetencia {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 200px;
+  margin: 2rem;
+  display: inline-block;
+}
+
+.containerCompetencia h4 {
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  color: #e0e0e0;
+  font-size: 1.5rem;
+}
+
+/* Projetos */
+
+#Projetos .container {
+  text-align: center;
+}
+
+.containerProjeto {
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 5rem;
+  max-width: 600px;
+  margin: 2rem;
+  display: inline-block;
 }
 
 /* Rodapé */
@@ -108,4 +210,31 @@ nav a:active {
 .logo {
   width: 40px;
   margin-right: 10px;
+}
+
+/* Animações */
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: darkblue;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
