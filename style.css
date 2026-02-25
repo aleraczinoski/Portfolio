@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -258,7 +263,8 @@ footer .container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 40%;
+  width: 90%;
+  max-width: 1200px;
 }
 
 footer {
@@ -346,5 +352,93 @@ footer {
 @keyframes fadeIn {
   to {
     opacity: 1;
+  }
+}
+
+/* Responsividade (Mobile e Tablet) */
+
+@media (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+
+  nav {
+    position: relative;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  nav img {
+    margin: 0 auto 1rem auto;
+    padding: 0;
+    height: 6rem;
+  }
+
+  nav a:link,
+  nav a:visited {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0.5rem 0;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+
+  #apresentacaoInicial {
+    flex-direction: column-reverse;
+    margin-top: 0;
+    padding: 4rem 2rem;
+    text-align: center;
+    height: auto;
+    min-height: auto;
+  }
+
+  #apresentacaoInicial .container h2 {
+    white-space: normal;
+    border: none;
+    animation: none;
+    text-align: center;
+    margin: 0 auto 1rem auto;
+  }
+
+  #imagemAle {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .containerCompetencia {
+    width: 42%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .containerProjeto,
+  .containerCertificados {
+    width: 100%;
+    display: block;
+    margin: 2rem 0;
+  }
+
+  footer .container {
+    width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-info,
+  .footer-nav {
+    text-align: center;
+  }
+
+  #redesSociais {
+    display: flex;
+    justify-content: center;
+  }
+
+  #redesSociais h4 {
+    display: none;
   }
 }
