@@ -214,6 +214,14 @@ nav a:active {
   margin: 2rem;
   display: inline-block;
   vertical-align: top;
+  transition: all 0.3s ease;
+}
+
+.containerProjeto:hover,
+.containerCertificados:hover {
+  transform: scale(1.01);
+  border-color: darkblue;
+  box-shadow: 0 0 20px rgba(0, 0, 139, 0.3);
 }
 
 .containerProjeto img,
@@ -231,6 +239,17 @@ nav a:active {
   margin-top: 0.5rem;
   color: #e0e0e0;
   font-size: 2rem;
+}
+
+.skill {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0.5rem 0 0.5rem;
+  background-color: rgb(26, 26, 26);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30%;
+  color: #e0e0e0;
+  font-size: 1.4rem;
 }
 
 /* Rodapé */
@@ -285,7 +304,16 @@ footer {
   display: inline-block;
   margin: 0.5rem;
   text-decoration: none;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited {
   color: #e0e0e0;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: grey;
 }
 
 #contato p {
