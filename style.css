@@ -363,9 +363,9 @@ footer {
 }
 
 /* Responsividade para notebooks pequenos */
-@media (max-width: 1300px) {
+@media (max-width: 1400px) {
   #apresentacaoInicial .container h2 {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
   #imagemAle {
     width: 30rem;
@@ -374,7 +374,7 @@ footer {
 
 /* Responsividade (Mobile e Tablet) */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
   html {
     font-size: 48%;
   }
