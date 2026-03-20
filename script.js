@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("data.json")
+  fetch("https://api.jsonbin.io/v3/b/69bcb047c3097a1dd53fe90f?meta=false")
     .then((response) => response.json())
     .then((data) => {
       renderizarSkills(data);
