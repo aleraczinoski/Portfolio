@@ -13,13 +13,13 @@ function renderizarSkills(data) {
   const container = document.querySelector("#Competencias .container");
   container.innerHTML = "<h2>Competências</h2>";
 
-  // Hard Skills
-  const h3Hard = document.createElement("h3");
-  h3Hard.className = "subtitulo-competencia";
-  h3Hard.textContent = "Hard Skills";
-  container.appendChild(h3Hard);
+  // Linguagens
+  const h3Linguagens = document.createElement("h3");
+  h3Linguagens.className = "subtitulo-competencia";
+  h3Linguagens.textContent = "Linguagens";
+  container.appendChild(h3Linguagens);
 
-  data.hardSkills.forEach((skill) => {
+  data.linguagens.forEach((skill) => {
     const div = document.createElement("div");
     div.className = "containerCompetencia";
     div.innerHTML = `
@@ -29,17 +29,32 @@ function renderizarSkills(data) {
     container.appendChild(div);
   });
 
-  // Soft Skills
-  const h3Soft = document.createElement("h3");
-  h3Soft.className = "subtitulo-competencia";
-  h3Soft.textContent = "Soft Skills";
-  container.appendChild(h3Soft);
+  // Frameworks e Bibliotecas
+  const h3FrameworksBibliotecas = document.createElement("h3");
+  h3FrameworksBibliotecas.className = "subtitulo-competencia";
+  h3FrameworksBibliotecas.textContent = "Frameworks e Bibliotecas";
+  container.appendChild(h3FrameworksBibliotecas);
 
-  data.softSkills.forEach((skill) => {
+  data.frameworksBibliotecas.forEach((skill) => {
     const div = document.createElement("div");
     div.className = "containerCompetencia";
     div.innerHTML = `
       <img src="${skill.icone}" alt="Ícone ${skill.nome}">
+      <h4>${skill.nome}</h4>
+    `;
+    container.appendChild(div);
+  });
+
+  const h3ferramentas = document.createElement("h3");
+  h3ferramentas.className = "subtitulo-competencia";
+  h3ferramentas.textContent = "Ferramentas";
+  container.appendChild(h3ferramentas);
+
+  data.ferramentas.forEach((skill) => {
+    const div = document.createElement("div");
+    div.className = "containerCompetencia";
+    div.innerHTML = `
+      <img src="${skill.icone}" alt="Logo ${skill.nome}">
       <h4>${skill.nome}</h4>
     `;
     container.appendChild(div);
